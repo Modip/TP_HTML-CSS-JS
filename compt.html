@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mystyle.css" />
+    <title>Creation compte</title>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <h3>BANQUE DU PEUPLE</h3>
+    </header>
+    <nav class="sidebar">
+        <a class="dash" href="index.html">Dashboard </a>
+        <a class="compt" href="compt.html" style="color: black;">Compte</a>
+        <a class="dash" href="client.html">Client</a>
+    </nav>
+    <form action="" id="inscription">
+        <div class="container">
+            <h2>Ouverture de Compte</h2>
+            <select id="typeclient" onchange="chwclient ()">
+                <option value="0">Choix Type Client</option>
+                <option value="1" id="cp" class="clp">Client Physique</option>
+                <option value="2" id="cm" class="clm">Client Moral</option>
+                </select>
+            <main id="clientphysique">
+                <fieldset class="clientphysique" id="cliphysique">
+                    <legend>Client Physique</legend>
+                    <select>    
+                        <option value="">Client</option>
+                        <option value="">Ousmane</option>
+                        <option value="">Marie</option>
+                        <option value="">Moustapha</option>
+                    </select> <br>
+                    <select name="" id="">
+                        <option value="">Agence</option>
+                        <option value="">Dakar</option>
+                        <option value="">Pire</option>
+                        <option value="">Tivaoune</option>
+                    </select> <br>
+                    <select name="" id="chx" onchange="chxcl()">
+                        <option value="0">Type de Compte</option>
+                        <option value="1" id="ccourant">Courant Xeweul</option>
+                        <option value="2" id="cepargne">Epargne</option>
+                        <option value="3" id="cbloque">Bloque</option>
+                    </select> <br>
+                    <label for="cle"> Clé RIB</label>
+                    <input type="" name="cle" class="cp" id="clerib"> <br>
+                    <label for="solde"> Solde</label>
+                    <input type="" name="solde" class="cp" id="solde"> <br>
+                    <label for="agios"> Agios</label>
+                    <input type="" name="agios" class="cp" id="agios"> <br>
+                    <label for="fraisou">Frais</label>
+                    <input type="text" name="frais" id="fraisou"> <br>
+                    <label for="date">Date d'ouverture</label>
+                    <input type="date" name="dateou" class="cp" id="dateou">
+                    <div id="datebloc">
+                        <label for="date">Date de blocage</label>
+                        <input type="date" name="dateoub" class="cp" id="dateoub"> <br>
+                        <label for="date">Date de déblocage</label>
+                        <input type="date" name="datedeb" id="datedeb">
+                    </div>
+
+                </fieldset>
+            </main>
+            <aside id="clientmoral">
+                <fieldset class="clientmoral" id="climoral">
+                    <select>
+                    <option value="">Simplon</option>
+                    <option value="">CBS</option>
+                </select> <br>
+                    <legend> client moral </legend>
+                    <label for="solde">Solde initial</label>
+                    <input type="text" name="solde" id="soldem"> <br>
+                    <label for="fraism">Frais</label>
+                    <input type="text" name="frais" id="fraism"> <br>
+                    <label for="datem">Date d'ouverture</label>
+                    <input type="date" name="dateoum" class="cp" id="datem">
+                </fieldset>
+            </aside>
+
+            <div class="boutton" id="boutton">
+                <input class="ajout" type="submit" value="Ajouter" onclick=" return validation()">
+                <input class="cancel" type="reset" value="Annuler">
+            </div>
+        </div>
+    </form>
+    <p style="color: red;" id="erreur"> </p>
+    <script src="compt.js"></script>
+
+</body>
+
+</html>

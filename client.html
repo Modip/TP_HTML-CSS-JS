@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mystyle.css" />
+    <title>Creation compte</title>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <h3>BANQUE DU PEUPLE</h3>
+    </header>
+    <div>
+        <nav class="sidebar">
+            <a class="dash" href="index.html">Dashboard </a>
+            <a class="compt" href="compt.html" style="color: black;">Compte</a>
+            <a class="dash" href="client.html">Client</a>
+        </nav>
+    </div>
+    <form id="inscription">
+        <div class="container">
+            <h2>Ajout de Client</h2>
+            <select id="typeclient" class="typeclient" onchange="return chwclient()">
+                <option value="0">Choix Type Client</option>
+                <option value="1" id="cp" class="clp">Client Physique </option>
+                <option value="2" id="cm" class="clm">Client Moral</option>
+             </select>
+            <main id="clientmoral" class="climo">
+                <fieldset>
+                    <legend> Client Moral </legend>
+                    <label for="mor">Nom</label>
+                    <input type="text" name="nom" class="cm" id="mor">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" name="Adresse" class="cm" id="adresse"> <br>
+                    <label for="social">Raison social</label>
+                    <input type="text" name="Raison social" class="cm" id="social">
+                    <label for="mail">E-mail</label>
+                    <input type="text" name="E-mail" class="cm" id="mail"> <br>
+                    <label for="login">Login</label>
+                    <input type="text" name="login" class="cm" id="login">
+                    <label for="password">Password</label>
+                    <input type="text" name="password" class="cm" id="password">
+                </fieldset>
+            </main>
+
+            <aside id="clientphysique">
+                <fieldset>
+                    <legend>Client Physique</legend>
+                    <label for="clips"> Salarié</label>
+                    <input type="radio" name="natclip" id="clips">
+                    <label for="clips">Non Salarié</label>
+                    <input type="radio" name="natclip" id="clipns"> <br>
+                    <label for="nameinput"> Nom</label>
+                    <input type="text" name="nom" class="clcp" id="nameinput">
+                    <label for="prenominput">Prénom</label>
+                    <input type="text" name="Prénom" class="clcp" id="prenominput"> <br>
+                    <label for="nininput">NIN</label>
+                    <input type="text" name="nin" class="clcp" id="nininput">
+                    <label for="telinput">Téléphone</label>
+                    <input type="text" name="numero" class="clcp" id="telinput"> <br>
+                    <label for="emailinput">Email</label>
+                    <input type="email" name="email" class="clcp" id="emailinput">
+                    <label for="professioninput">Profession</label>
+                    <input type="text" name="prefession" class="clcp" id="professioninput"> <br>
+                    <label for="logininput">Login</label>
+                    <input type="text" name="login" class="clcp" id="logininput">
+                    <label for="passinput">Password</label>
+                    <input type="password" name="password" class="clcp" id="passinput"> <br>
+                    <label for="soldeinput">Salaire</label>
+                    <input type="text" name="salaire" class="clcp" id="soldeinput">
+                    <p> Employeur
+                        <select name="" id="">
+                            <option value="">Employeur</option>
+                            <option value="">Simplon</option>
+                            <option value="">Banque du peuple</option>
+                        </select>
+                    </p>
+                </fieldset>
+            </aside>
+
+            <div class="boutton" id="boutton">
+                <button type="submit" class="ajout" onclick="return validate()"> Ajouter </button>
+                <button class="cancel" type="reset">Annuler </button>
+            </div>
+        </div>
+    </form>
+
+    <p style="color: red;" id="erreur"> </p>
+
+    <script src="bp.js"></script>
+</body>
+
+</html>
